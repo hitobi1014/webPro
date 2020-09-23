@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+window.onload = function() {
+	//랜덤 발생
+	rand = Math.floor(Math.random()*100+1);
+	count = 0;
+	hint = "";
+	values ="";	
+	
+	result = document.querySelector('#result1');
+}
+	
+function proc1() {
+	// 입력한 값 가져오기
+	inputvalue = document.querySelector('#input').value;
+	// 입력값을 누적하기
+	values += inputvalue+" ";
+	// 값 비교
+	if(rand == inputvalue){
+		hint = "정답";
+		count++;
+		//출력
+		res = "랜덤 : " + rand + "<br>";
+		res += "입력한 값들 : "+ values +"<br>";
+		res += "횟수 : " + count;
+		result.innerHTML = res;
+	}else if(rand > inputvalue){
+		hint="더 큰 숫자를 입력해주세요";
+		count++;
+		result.innerHTML = hint;
+	}else if(rand < inputvalue){
+		hint="더 작은 숫자를 입력해주세요";
+		count++;
+		result.innerHTML = hint;
+	}
+	
+	
+}
+
+function proc2() {
+	user = prompt("가위바위보 중 하나를 입력");
+	arr = ["가위","바위","보"]; // [0] 가위 [1] 바위 [2] 보
+	// 랜덤발생 0~2까지
+	rand = Math.floor(Math.random()*3);
+	// 컴퓨터 랜덤 값
+	com = arr[rand];
+	
+	// 비교
+	res="컴퓨터 : "+com + "<br>";
+	res += "사용자 : "+user + "<br>";
+	if(com == user){
+		res += "비겼습니다."; 
+	}else if((com=="가위" && user=="보") || (com=="바위" && user=="가위") || (com=="보" && user =="바위")){
+		res += "컴퓨터가 이겼습니다. (っ °Д °;)っ";
+	}else{
+		res += "사용자가 이겼습니다. (●'◡'●)";
+	}
+	
+	document.getElementById('result2').innerHTML = res;
+	
+}
+
+function proc3() {
+	// 배열 선언
+	arr = [];
+	 for(;;){
+		 //랜덤 발생
+		 rand = Math.floor(Math.random()*45+1)
+		 //배열에 같은값이 있는지 비교
+		 if(arr.indexOf(rand)==-1) arr.push(rand);
+		 //배열의 개수를 비교 .. 6개면 종료
+		 if(arr.length == 6) break;
+		 //없으면 배열에 저장 , 있으면 다시 랜덤발생
+	 }
+	 
+	 //배열 출력
+	 document.getElementById('result3').innerHTML += arr +"<br>";
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 랜덤 수 맞추기</h3>
+	1~100 사이의 랜덤을 발생한다<br>
+	랜덤수를 맞춘다
+	힌트와 몇 번만에 맞췄는지 체크<br>
+	<br>
+	<input type="text" id="input">
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2. 가위바위보</h3>
+	컴퓨터는 배열에 저장, 랜덤으로 가위바위보를 결정 <br>
+	사용자는 가위바위보를 입력 - prompt <br>
+	어느쪽이 이겼는지 결과를 출력 <br>
+	<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>3. 로또번호 발생</h3>
+	1~45번까지 랜덤을 5개 발생 => 배열에 저장<br>
+	중복이 없어야한다<br>
+	<br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br><br>
+	<div id="result3"></div>
+</div>
+</body>
+</html>

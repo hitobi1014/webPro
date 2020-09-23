@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+table#tab1 {
+	border: 3px solid lightgreen;
+	border-collapse: collapse;
+	width: 50%;
+	margin: 10px auto;
+}
+
+#tab1 th {
+	height: 50px;
+}
+
+#tab1 td {
+	width: 300px;
+	height: 40px;
+	text-align: center;
+}
+
+#tab1 #tr1 {
+	background: black;
+	color: white;
+}
+
+#tab2 {
+	border: 5px dotted red;
+	border-collapse: separate;
+	width: 50%;
+	margin: 50px auto;
+}
+
+#tab2 th {height 30px;
+	
+}
+
+#tab2 td {
+	width: 250px;
+	height: 20px;
+	text-align: right;
+}
+
+#tab2 #tr2 {
+	background: rgb(80,80,225,0.6);
+	color: yellow;
+	font-weight: bold;
+}
+
+#tab3 {
+	border: 10px inset skyblue;
+	margin
+	15px;
+}
+
+#tab3 th {height 30px;
+	
+}
+
+#tab3 td {
+	width: 250px;
+	height: 30px;
+}
+
+tr {
+	background: gray;
+	font-weight: bold;
+	color: white;
+}
+</style>
+</head>
+<body>
+
+	<pre>
+작성팁
+table : 표 형태의 데이터를 표시
+  tr(row) : 행, 줄
+  td(date): 열, 칸
+  th(header): td대신 제목표시
+
+스타일
+  table : border, border-collapse
+  td : width, height, text-align
+  tr : background
+  th : width, height
+</pre>
+
+	<table id="tab1" border="1">
+		<tr id="tr1">
+			<th>이름</th>
+			<th>생일</th>
+			<th>전화번호</th>
+		</tr>
+
+		<tr>
+			<td>와사비</td>
+			<td>94.01.14</td>
+			<td>010-5214-2314</td>
+		</tr>
+
+		<tr>
+			<td>이영지</td>
+			<td>00.05.06</td>
+			<td>010-1234-1234</td>
+		</tr>
+
+		<tr>
+			<td>제이미</td>
+			<td>89.09.01</td>
+			<td>010-4567-4561</td>
+		</tr>
+	</table>
+
+	<table id="tab2" border="1">
+		<tr id="tr2">
+			<th>이름</th>
+			<th>생일</th>
+			<th>전화번호</th>
+		</tr>
+
+		<tr>
+			<td>와사비</td>
+			<td>94.01.14</td>
+			<td>010-5214-2314</td>
+		</tr>
+
+		<tr>
+			<td>이영지</td>
+			<td>00.05.06</td>
+			<td>010-1234-1234</td>
+		</tr>
+
+		<tr>
+			<td>제이미</td>
+			<td>89.09.01</td>
+			<td>010-4567-4561</td>
+		</tr>
+	</table>
+
+	<table id="tab3" border="1">
+		<tr id="tr3">
+			<th>이름</th>
+			<th>생일</th>
+			<th>전화번호</th>
+		</tr>
+
+		<tr>
+			<td>와사비</td>
+			<td>94.01.14</td>
+			<td>010-5214-2314</td>
+		</tr>
+
+		<tr>
+			<td>이영지</td>
+			<td>00.05.06</td>
+			<td>010-1234-1234</td>
+		</tr>
+
+		<tr>
+			<td>제이미</td>
+			<td>89.09.01</td>
+			<td>010-4567-4561</td>
+		</tr>
+	</table>
+</body>
+</html>

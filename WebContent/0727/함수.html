@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1() {
+	res="";
+	for(i=0; i<5;i++){
+		rd =Math.floor(Math.random()*100+1);
+		res += rd  + ", ";
+	}
+	a = res.lastIndexOf(",");
+	res = res.substring(0,a);
+	
+	res += "<br>";
+	document.querySelector('#result1').innerHTML +=res;
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 랜덤 5개 발생</h3>
+	- 1~100 사이의 수
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	<h2>실행결과</h2>
+	<div id="result1"></div>
+</div>
+</body>
+</html>

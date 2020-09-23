@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+</style>
+</head>
+<body>
+<pre>
+날짜 생성
+	var now = new Date();
+	document.write(now);
+	document.write(now.toLocaleString()); //년월일 시분초 출력
+	document.write(now.toLocaleDateString()); //날짜만 출력
+	document.write(now.toLocaleTimeString()); //시간만 출력
+</pre>
+<script>
+	var now = new Date();
+	document.write(now+"<br>");
+	document.write(now.toLocaleString()+"<br>"); //년월일 시분초 출력
+	document.write(now.toLocaleDateString()+"<br>"); //날짜만 출력
+	document.write(now.toLocaleTimeString()+"<br>"); //시간만 출력
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+ul#u2{
+	border: 2px solid blue;
+	padding: 20px;
+	border-left: none;
+	border-right: none;
+}
+#u2 li{
+/*  	border: 1px solid pink;  */
+	display: inline;
+	margin: 20px;
+ 	padding: 10px; 
+	letter-spacing: 10px;
+}
+
+.menubar li {
+	display: inline;
+	background-color: yellow; 
+	margin: 0; 
+    border: 1px solid;
+    border-color: red; 
+    padding: .5em;}
+
+a {
+	text-decoration : none;  
+}
+
+div{
+	display: none;
+}
+</style>
+<script>
+	function show() {
+		//div요소로 접근
+		//변수선언 방법 : var a; let a const a; var의 의미가 더 넓음, let은 선언된 블록에서만 사용가능
+		var vdiv = document.querySelector('div');
+		vdiv.style.display = "block";
+	}
+	function hide() {
+		var vdiv = document.querySelector('div');
+		vdiv.style.display = "none";
+	}
+</script>
+</head>
+<body>
+<ul>
+	<li>홈으로</li>
+	<li>공지사항</li>
+	<li>오시는길</li>
+	<li>제품소개</li>
+	<li>질문과 대답</li>
+</ul>
+<pre>
+작성팁
+ul#u2{
+	border: 2px solid blue;
+	padding: 20px;
+	border-left: none;
+	border-right: none;
+}
+#u2 li{
+/*  	border: 1px solid pink;  */
+	display: inline;
+	margin: 20px;
+ 	padding: 10px; 
+	letter-spacing: 10px;
+}
+
+</pre>
+<ul id="u2">
+	<li>홈으로</li>
+	<li>공지사항</li>
+	<li>오시는길</li>
+	<li>제품소개</li>
+	<li>질문과 대답</li>
+</ul>
+
+<pre>
+.menubar li {
+	display: inline;
+	background-color: yellow; 
+	margin: 0; 
+    border: 1px solid;
+    border-color: red; 
+    padding: .5em;}
+
+a {
+	text-decoration : none;  
+}
+</pre>
+확인 버튼 클릭하면 메뉴가 나타난다<br>
+<input type="button" value="확인" onclick="show()">
+<input type="button" value="감추기" onclick="hide()">
+<div>
+	<ul class="menubar">
+        <li><a href="#">홈으로</a></li>
+        <li><a href="#">회사 소개</a></li>
+        <li><a href="#">제품 소개</a></li>
+        <li><a href="#">질문과 대답</a></li>
+        <li><a href="#">연락처</a></li>
+    </ul>
+</div>
+</body>
+</html>

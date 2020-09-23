@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function print() {
+	// 이름을 이용해서 접근한다
+	//names = document.getElementsByName('name');
+	vname = document.ff.name.value;
+	vgender = document.ff.gender.value;
+	
+	vhobby = document.ff.hobby;
+	res = "이름 : "+vname+"\n";
+	res += "성별 : "+vgender+"\n";
+	res += "취미 : "
+	for(i=0;i<vhobby.length;i++){
+		if(vhobby[i].checked){
+			res += vhobby[i].value+" "; 
+		}
+	}	
+	
+	document.ff.text10.innerHTML = res;
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>form 문제 2</h3>
+	<form name="ff">
+		<p>
+		<strong>이름 : </strong>
+		<input type="text" name="name">
+		</p>	
+		
+		<p>
+		<strong>성별 : </strong>
+		<input type="radio" name="gender" value="남자" checked>남자
+		<input type="radio" name="gender" value="여자">여자
+		</p>
+		
+		<strong>취미 : </strong>
+		<input type="checkbox" name="hobby" value="여행">여행
+		<input type="checkbox" name="hobby" value="사진">사진
+		<input type="checkbox" name="hobby" value="보드게임">보드게임
+		<input type="checkbox" name="hobby" value="영화">영화
+		<input type="checkbox" name="hobby" value="운동">운동
+		<input type="checkbox" name="hobby" value="독서">독서
+		
+		<p>
+		<input type="button" value="결과출력" onclick="print()">
+		</p>
+		
+		<textarea name="text10" rows="10" cols="60"></textarea>
+		<br>
+		<div id="result1">
+		</div>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+window.onload = function() {
+	//img태그로 접근, src속성값을 가져온다
+	vimg = document.querySelector('img');
+// 	vsrc = vimg.getAttribute('src');
+// 	console.log(vsrc);
+}
+
+function proc1() {
+	vsrc = vimg.getAttribute('src');
+	console.log(vsrc);
+	
+	if(vsrc.match("on") == null){
+		// on이 포함되어있지 않다 => sw_off.png로 설정되어있음
+		// sw_on.png로 src의 속성 값을 변경
+		vimg.setAttribute('src','../images/sw_on.png');
+	}else{
+		//on이 포함되어있을때 => sw_off.png로 변경
+		vimg.setAttribute('src','../images/sw_off.png');
+	}
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 이미지 변경</h3>
+	sw_on.png 와 sw_off.png를 번갈아 변경 <br>
+	match(검색문자) : 해당 검색문자가 있으면 리턴 없으면 null을 리턴 <br>
+	src속성의 값을 가져온다 - getAttribute('src')
+	<br>
+	<div id="result1">
+		<img alt="" src="../images/sw_off.png" onclick="proc1()">
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function Circle(name, rad) {
+	this.name = name;
+	this.rad = rad;
+	
+	this.getArea = function () {
+		var area = Math.floor(Math.pow(this.rad,2)*Math.PI);
+		return area;
+	};
+	this.getCircum = function () {
+		var circum = Math.floor(2*Math.PI*this.rad);
+		return circum;
+	};
+}
+
+
+function proc1() {
+	// 이름과 반지름을 입력
+	// Circle객체의 매개변수로 넘겨준다.
+	a = prompt("이름을 입력해주세요");
+	b = prompt("반지름을 입력해주세요")
+	c2 = new Circle(a,b);
+// 	var c1 = new Circle("동글동글 왕감자 대홍단 감자",3);
+	
+	res = "이름 : "+c2.name+"<br>";
+	res += "반지름 : "+c2.rad+"<br>";
+	res += "면적 : "+c2.getArea()+"<br>";
+	res += "둘레 : "+c2.getCircum()+"<br>";
+	
+	document.getElementById('result1').innerHTML = res;
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 객체 생성 - 생성자</h3>
+	- function 객체이름(para1, para2 ...){  
+		this.속성 = para1;
+		this.함수 = function(){ }
+	}
+	- new 객체이름(값1, 값2, ...)
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+</body>
+</html>

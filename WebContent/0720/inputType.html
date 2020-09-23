@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#sendimg{
+	width: 50px;
+	height: 50px;
+}
+
+
+</style>
+</head>
+<body>
+	<form action="input.jsp" method="post">
+	<input type="hidden" value="korea" name="id">
+	이름 : <input type="text" name="name"><br>
+	성별 : <input type="radio" value="남자" name="gender">남자
+		 <input type="radio" value="여자" name="gender">여자<br>
+	좋아하는 과일 : <input type="checkbox" value="사과" name="fruits">사과
+				<input type="checkbox" value="복숭아" name="fruits">복숭아
+				<input type="checkbox" value="파인애플" name="fruits">파인애플
+				<input type="checkbox" value="망고" name="fruits">망고
+				<input type="checkbox" value="메론" name="fruits">메론
+				<input type="checkbox" value="방토" name="fruits">방토
+				<input type="checkbox" value="코코" name="fruits">코코<br>
+	첨부파일 : 
+		<input type="file" name="file">
+		
+		<br>
+		-전송 수행 : input type=image, input type=submit<br>
+		-일반 버튼 : input type=button <br>
+		<input id="sendimg" type="image" src="../images/스포츠1.jpg">
+		<input type="reset" value="취소">
+		<input type="submit" value="전송">
+		<input type="button" value="확인">
+		
+		<br>
+		- 전송수행 : button type=submit<br>
+		- 일반버튼 : button type="button"<br>
+		<button type="button" onclick="alert('로티보이존맛탱')">확인</button> 
+		<button type="submit">전송</button>
+		<button type="reset">취소</button> 
+		<button>전송11</button>
+	</form>
+</body>
+</html>

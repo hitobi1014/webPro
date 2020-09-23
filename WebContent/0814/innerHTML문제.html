@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+#bu1{
+	width: 100px;
+	height: 50px;
+}
+#text{
+	text-align: center;
+}
+</style>
+<script>
+window.onload = function () {
+	form = document.forms[0];
+}
+function print() {
+	idx = form.dan.selectedIndex;
+	if(idx<0){
+		alert("단을 선택해주세요");
+		return;
+	}
+	val = form.dan[idx].value;
+	
+	res ="";
+	for(i=1; i<10; i++){
+		res += val+" * "+i+" = "+(val*i)+"\n";
+	}
+	form.text11.innerHTML = res;
+	
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<form>
+		<select name="dan">
+			<option value="2">2단</option>
+			<option value="3">3단</option>
+			<option value="4">4단</option>
+			<option value="5">5단</option>
+			<option value="6">6단</option>
+			<option value="7">7단</option>
+			<option value="8">8단</option>
+			<option value="9">9단</option>
+		</select>
+		<input id="bu1" type="button" value="출 력" onclick="print()">
+		<h2>결과 출력</h2>
+		<textarea id="text" name="text11" rows="20" cols="40"></textarea>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+img{
+	width: 100px;
+	height: 80px;
+}
+#game{
+	text-align: center;
+}
+#end{
+	display : none;
+}
+#people{
+	background-color: yellow;
+	text-align: center;
+}
+#com{
+	background-color: pink;
+	text-align: center;
+}
+
+table{
+	border : 1px solid blue;
+	width: 50%;
+	height: auto;
+}
+
+td{
+	width: 200px;
+	height: 40px;
+}
+
+#ro3{
+	height: 250px;
+}
+#ro3 img{
+	width: 300px;
+	height: 220px;
+}
+</style>
+
+<script>
+window.onload = function () {
+	end = document.getElementById('end');
+	start = document.getElementById('start');
+}
+function proc1() {
+	
+	start.style.display="none";
+	arr=["가구1.jpg", "가구2.jpg", "가구3.jpg", "가위_우.png", "가위_좌.png", "게시판수정.png","국화.jpg"];
+	a = setInterval(function() {
+	//랜덤발생
+	rand = Math.floor(Math.random()*arr.length);
+	
+	img = arr[rand]
+	document.getElementById('img1').src = "../images/"+img;
+	},1000)
+	end.style.display="inline";
+	
+}
+
+function proc2() {
+	clearInterval(a);
+}
+
+function st() {
+	// 좌 : 사람 ,, 우 : 컴퓨터
+	stm = prompt("가위 바위 보를 입력하세요");
+	if(stm!=null){
+		comArr=["가위_우.png", "보_우.png", "바위_우.png"];
+		rand = Math.floor(Math.random()*comArr.length);
+		comimg = comArr[rand];
+		document.getElementById('compic').src = "../images/"+comimg;
+		
+		if(stm=="가위"){
+			document.getElementById('user').src= "../images/가위_좌.png";
+		}else if(stm=="바위"){
+			document.getElementById('user').src= "../images/바위_좌.png";
+		}else if(stm=="보"){
+			document.getElementById('user').src= "../images/보_좌.png";
+		}
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 이미지 변경</h3>
+	버튼을 클릭하면 1초간격으로 이미지를 변경<br>
+	이미지 배열을 이용<br>
+	랜덤을 이용해서 이미지를 선택한다<br>
+	<input id="start" type="button" value="확인" onclick="proc1()">
+	<input id="end" type="button" value="종료" onclick="proc2()">
+	<br><br>
+	<img alt="이미지1" src="../images/대나무숲.jpg" id="img1">
+</div>
+
+<div class="box">
+	<h3>2. 가위바위보</h3>
+	컴퓨터는 랜덤으로 결정<br>
+	사용자는 입력<br>
+	가위바위보에 해당하는 이미지를 변경한다<br>
+	<table border="1">
+		<tr id="ro1">
+			<td id="game" colspan="2">
+			<input id="gameStart" type="button" value="게임시작" onclick="st()">
+			</td>
+		</tr>
+		
+		<tr id="ro2">
+			<td id="people">사람</td>
+			<td id="com">컴퓨터</td>
+		</tr>
+		
+		<tr id="ro3">
+			<td>
+			<img alt="userPic" src="../images/가구1.jpg" id="user">
+			</td>
+			<td>
+			<img alt="comPic" src="../images/가구2.jpg" id="compic">
+			</td>
+		</tr>
+		
+		<tr id="ro4">
+			<td colspan="2"></td>
+		</tr>
+		 
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+p {
+	font-size: 1.5em;
+}
+p[class=pp]{
+	color: green;
+	font-weight: bold;
+}
+span[class=pp]{
+	background:yellow;
+	color: red;
+	font-size: 2.3em;
+	font-weight: bold;
+}
+pre{
+	padding: 10px;
+}
+strong{
+	font-size: 1.4em;
+}
+p[id=p4]{
+	background-color: #f1a1b2;
+}
+p[title=무궁화1]{
+	border: 3px solid black;
+}
+p[title]{
+	font-style: italic;
+	color: red;
+}
+p[id]{
+	text-align: center;
+	text-shadow: 20px 10px 5px white;
+}
+#p1{
+	font-weight: bold;
+	color : white;
+	background: black;
+}
+</style>
+</head>
+<body>
+<div>
+<pre>
+작성팁
+.pp : 클래스명이 pp인것들 전부 선택
+p.pp
+span.pp
+속성 관련 선택자
+**클래스**
+[] 는 속성관련 선택자
+<strong>p[class=pp]</strong>
+<strong>span[class=pp]</strong>
+**아이디**
+#p4
+<strong>p[id=p4]</strong> background-color: #f1a1b2;
+<strong>p[title=무궁화1]</strong> border: 3px solid red;
+<strong>p[title] ← title이 있는것 전부 선택</strong> font-style: italic; / color: red;
+<strong>p[id]</strong> text-align: center; / text-shadow: 20px 10px 5px blue;
+
+글자의 그림자
+text-shadow: 20px(x좌표) 10px(y좌표) 5px(선명도, 숫자가 커질수록 흐려진다) blue(그림자 색);
+</pre>
+<!-- 	title= 마우스를 올려놓았을때 뜨는 문구 -->
+	<p title="무궁화1" id="p1">달샘이네 방울토마토 농장</p>
+	<p class="pp">무궁화 꽃이 피었습니다</p>
+	<p title="무궁화2" class="pp">무궁화 꽃이 피었습니다</p>
+	<p id="p4">무궁화 꽃이 피었습니다</p>
+	<p class="pp2">무궁화 꽃이 피었습니다</p>
+	
+	<span class="pp">사과</span>
+	<span>복숭아</span>
+	<span>패션후르츠</span>
+</div>
+</body>
+</html>

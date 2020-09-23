@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css" type="text/css">
+<script>
+function proc1() {
+	window.open("../아메리카노.html","아메리카노","width=300 height=500");
+					// 논리적인 이름임 , 화면에 보이지 않음
+}
+
+function proc2() {
+	window.open("input.html","입력","width=500 height=300 top=200 left=200");
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 새창열기</h3>
+	확인 버튼 클릭하면 새로운 윈도우 창을 연다<br>
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2. 새창열기</h3>
+	확인 버튼 클릭하면 새로운 윈도우 창을 연다<br>
+	새로운 창(자식창)에서 이름 주소 전화번호를 입력받는다<br>
+	자식창에서 입력받은 값을 부모창에 출력한다.
+	<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2"></div>
+</div>
+</body>
+</html>

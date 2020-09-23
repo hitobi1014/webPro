@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1() {
+	today = new Date();
+	birday = new Date(1994,10-1,14);
+	
+	times = today.getTime() - birday.getTime();
+	
+	res = "살아온 millisec : "+times + "<br>";
+	res += "살아온 초 : "+Math.floor(times/1000)+"<br>";
+	res += "살아온 분 : "+Math.floor(times/1000/60)+"<br>";
+	res += "살아온 시간 : "+Math.floor(times/1000/60/60)+"<br>";
+	res += "살아온 일 : " +Math.floor(times/1000/60/60/24)+"<br>";
+	res +="살아온 달 : " +Math.floor(times/1000/60/60/24/30)+"<br>";
+	res +="살아온 년 : "+Math.floor(times/1000/60/60/24/30/12)+"<br>";
+	
+	document.getElementById('result1').innerHTML = res;
+}
+
+function proc2() {
+	// 오늘 날짜 생성
+	today = new Date();
+	// 오늘의 millisec + 100일의 millisec
+	times = today.getTime()+(100*24*60*60*1000);
+	//새로운 Date생성
+	nday = new Date(times);
+	
+	
+	//nday 출력
+	document.getElementById('result2').innerHTML = nday.toLocaleDateString();
+	
+}
+
+function proc3() {
+	xmas = new Date(2020,12-1,25);
+	today = new Date();
+	times = Math.floor((xmas.getTime()-today.getTime())/1000/60/60/24);
+	times += "일 ...┗|｀O′|┛";
+	document.getElementById('result3').innerHTML = times;
+	
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 경과시간</h3>
+	- 태어난 날로부터 현재까지 날 수 구하기<br>
+	- birday = new Date("태어난 날")<br>
+	- today = new Date() : 현재 오늘 날짜<br>
+	- getTime()<br>
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2. 경과시간</h3>
+	- 오늘부터 1일일때 100일 후 구하기<br>
+	- today = new Date()<br>
+	- 100일의 millisec  값 구하기<br>
+	- today.getTime()+ 100일의 millisec<br>
+	<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>3. 경과시간</h3>
+	- 크리스마스까지 남은 날 수 구하기<br>
+	<br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br><br>
+	<div id="result3"></div>
+</div>
+</body>
+</html>

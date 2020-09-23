@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1() {
+		a = prompt("첫 번재 사람 입력","가위 / 바위 / 보");
+		b = prompt("두 번재 사람 입력","가위 / 바위 / 보");
+		
+		res ="첫번째 사람 : "+a+"<br>";
+		res += "두번째 사람 : "+b+"<br>";
+		if(a==b){
+		res += "결과 : 비김";
+		}else if(a == "가위" && b == "보" 
+				|| a == "바위" && b == "가위" 
+				|| a == "보" && b == "바위"){
+			res += "결과 : 첫 번째 사람 승";
+		}else{
+			res += "결과 : 두 번째 사람 승";
+		}
+		document.getElementById('result1').innerHTML = res;
+		//document.querySelector('#result1').innerHTML = res;
+	}
+</script>
+<style>
+#result1{
+	background: linear-gradient(45deg,#F2EFFB,red,white);
+	padding: 10px auto;
+}
+</style>
+</head>
+<body>
+<pre>
+버튼 클릭하면 두 사람의 가위바위보를 prompt로 입력받아 승자를 가린다.
+</pre>
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<div id="result1"></div>	
+</body>
+</html>

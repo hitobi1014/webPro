@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+  <!-- 외부스타일 적용-->
+  <link rel="stylesheet" href="css/public.css">
+  
+  <style>
+	body div{
+	  border : 1px solid black;
+	  width : 250px;
+	  height : 200px;
+	  margin : 10px;
+	  display : inline-block;
+	  overflow : auto;
+	}
+	img{
+	  width : 50px;
+	  height : 30px;
+	}
+	
+	/*아이디 앞에는 #*/
+	
+	#d1{
+	  border : 3px solid red;
+	}
+	
+  </style>
+  <body>
+	<pre>
+	  작성팁
+	테두리 설정 : 두께 (px)
+			  스타일 (solid, double, dotted, inset, outset)
+			  색상
+	 border :  1px solid green
+	넘치는 항목 처리 : overflow (auto, hidden, scroll)
+	외부스타일 작성 및 적용
+	  작성 : *.css로 저장 
+	  적용 : &lt;link rel="stylesheet" href="public/public.css"&gt;
+	</pre>
+	
+	<div id="d1">
+	<h3>번호 없는 리스트</h3>
+	텍스트
+	<ul>
+	  <li>아메리카노</li>
+	  <li>카페라떼</li>
+	  <li>카푸치노</li>
+	  <li>에스프레소</li>
+	</ul>
+	</div>
+	
+	<div>
+	<h3>번호 없는 리스트</h3>
+	이미지
+	<ul>
+	  <li><img src="images/핫초코.jpg" alt="핫초코"></li>
+	  <li><img src="images/에스프레소.jpg" alt="에스프레소"></li>
+	  <li><img src="images/카페라떼.jpg" alt="카페라떼"></li>
+	  <li><img src="images/카푸치노.jpg" alt="카푸치노"></li>
+	</ul>
+	</div>
+	
+	<div>
+	<h3>a링크</h3>
+	<ul>
+	  <li><a href="커피.html" target="_blank">아메리카노</a></li>
+	  <li><a href="커피.html"target="_blank">카페라떼</a></li>
+	  <li><a href="커피.html"target="_blank">카푸치노</a></li>
+	  <li><a href="커피.html"target="_blank">에스프레소</a></li>
+	</ul>
+	</div>
+	
+	<div>
+	<h3>번호 없는 리스트</h3>
+	a링크 이미지
+	<ul>
+	  <li><a href="아메리카노.html"target="_blank"><img src="images/핫초코.jpg" alt="핫초코"></a></li>
+	  <li><a href="카페오레.html"target="_blank"><img src="images/에스프레소.jpg" alt="에스프레소"></a></li>
+	  <li><a href="카푸치노.html"target="_blank"><img src="images/카페라떼.jpg" alt="카페라떼"></a></li>
+	  <li><a href="에스프레소.html"target="_blank"><img src="images/카푸치노.jpg" alt="카푸치노"></a></li>
+	</ul>
+	</div>
+	
+	<div>
+	<h3>번호 없는 리스트</h3>
+	다른리스트
+	<ul>
+	  <li> Ul속에 Ul 
+	    <ul> 
+	      <li>abc
+		    <ol>
+			  <li>abc-1</li>
+			  <li>abc-2</li>
+			</ol>
+		  </li> 
+	      <li>def</li> 
+		</ul> 
+	  </li>
+	  
+	  <li> Ul속에 Ul
+	    <ul>
+		  <li>abc</li>
+		  <li>def</li>
+		</ul>
+	  </li>
+	</ul>
+	</div>
+	
+	<hr>
+	
+	<div>
+	<h3>번호 있는 리스트</h3>
+	텍스트
+	<ol>
+	  <li>아메리카노</li>
+	  <li>카페라떼</li>
+	  <li>카푸치노</li>
+	  <li>에스프레소</li>
+	</ol>
+	</div>
+	
+	<div>
+	<h3>번호 있는 리스트</h3>
+	이미지
+	<ol>
+	  <li><img src="images/Jellyfish.jpg" alt="Jellyfish"></li>
+	  <li><img src="Koala.jpg" alt="Koala"></li>
+	  <li><img src="딸기스무디.jpg" alt="딸기스무디"></li>
+	  <li><img src="" alt=""></li>
+	</ol>
+	</div>
+	
+	<div>
+	<h3>번호 있는 리스트</h3>
+	a 링크
+	<ol>
+	  <li>아메리카노</li>
+	  <li>카페라떼</li>
+	  <li>카푸치노</li>
+	  <li>에스프레소</li>
+	</ol>
+	</div>
+	
+	<div>
+	<h3>번호 있는 리스트</h3>
+	a 링크 이미지
+	<ol>
+	  <li>아메리카노</li>
+	  <li>카페라떼</li>
+	  <li>카푸치노</li>
+	  <li>에스프레소</li>
+	</ol>
+	</div>
+	
+	<div>
+	<h3>번호 있는 리스트</h3>
+	다른 리스트
+	<ol>
+	  <li>아메리카노
+	    <ol>
+		  <li>설탕추가</li>
+		  <li>샷추가</li>
+	    </ol>
+	  </li>
+	  
+	  <li>카페오레
+	    <ol>
+		  <li>우유추가</li>
+		  <li>샷추가</li>
+	    </ol>
+	  </li>
+	  
+	  <li>카푸치노
+	    <ol>
+		  <li>크림치즈추가</li>
+		  <li>샷추가</li>
+	    </ol>
+	  </li>
+	  
+	  <li>에스프레소
+		<ol>
+		  <li>샷추가</li>
+		</ol>
+	  </li>
+	</ol>
+	</div>
+	
+	<hr>
+	
+	<div>
+	<h3>정의 리스트</h3>
+	  <dt>아메리카노</dt>
+	  <dd>에스프레소에 <sup>물</sup>을 <sub>추가</sub>한 것입니다.</dd>
+	  
+	  <dt>카페오레</dt>
+	  <dd>에스프레소에 <sup>우유</sup>를 <sub>넣은</sub> 커피입니다.</dd>
+	  
+	  <dt>카푸치노</dt>
+	  <dd>커피 위에 <sup>우유거품</sup>을 <sub>얹은</sub> 커피입니다.</dd>
+	</div>
+	
+	<div>
+	<h3>정의 리스트</h3>
+	  <dt>아메리카노</dt>
+	  <dd>에스프레소에 <sup>물</sup>을 <sub>추가</sub>한 것입니다.</dd>
+	  
+	  <dt>카페오레</dt>
+	  <dd>에스프레소에 <sup>우유</sup>를 <sub>넣은</sub> 커피입니다.</dd>
+	  
+	  <dt>카푸치노</dt>
+	  <dd>커피 위에 <sup>우유거품</sup>을 <sub>얹은</sub> 커피입니다.</dd>
+	</div>
+	<div>
+	<h3>정의 리스트</h3>
+	  <dt>아메리카노</dt>
+	  <dd>에스프레소에 <sup>물</sup>을 <sub>추가</sub>한 것입니다.</dd>
+	  
+	  <dt>카페오레</dt>
+	  <dd>에스프레소에 <sup>우유</sup>를 <sub>넣은</sub> 커피입니다.</dd>
+	  
+	  <dt>카푸치노</dt>
+	  <dd>커피 위에 <sup>우유거품</sup>을 <sub>얹은</sub> 커피입니다.</dd>
+	</div>
+	<div>
+	<h3>정의 리스트</h3>
+	  <dt>아메리카노</dt>
+	  <dd>에스프레소에 <sup>물</sup>을 <sub>추가</sub>한 것입니다.</dd>
+	  
+	  <dt>카페오레</dt>
+	  <dd>에스프레소에 <sup>우유</sup>를 <sub>넣은</sub> 커피입니다.</dd>
+	  
+	  <dt>카푸치노</dt>
+	  <dd>커피 위에 <sup>우유거품</sup>을 <sub>얹은</sub> 커피입니다.</dd>
+	</div>
+  </body>
+</html>

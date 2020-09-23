@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+*{
+	color:blue;
+}
+fieldset {
+	width: 50%;
+}
+
+label {
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+}
+
+#e1 {
+	border: 3px solid blue;
+	width: 450px;
+	height: 300px;
+	padding: 25px;
+}
+
+#e2 {
+	border: 3px solid blue;
+	width: 300px;
+	height: 150px;
+	padding: 30px;
+}
+</style>
+</head>
+<body>
+<pre>
+작성팁 
+fieldset : 입력 항목들의 그룹핑
+legend : fieldset의 제목
+label : 일반 문자, 문자의 길이를 같게 하기 위해서 사용
+ - label 요소가 인라인 요소이기 때문에 
+ display : inline-block를 사용해야 한다.
+</pre>
+	<form>
+		<fieldset>
+			<legend>인적사항</legend>
+			<label>이름</label>
+			<input type="text"><br>
+			<label>전화번호 </label>
+		
+			<input type="text"><br>
+		</fieldset>
+		
+		<fieldset>
+			<legend>경력사항</legend>
+			<label>이메일</label>
+			<input type="text"><br>
+			<label>생일</label>
+			<input type="date"><br>
+		</fieldset>
+	</form>
+	
+	<hr>
+	<h1>이메일 전송 화면</h1>
+	<form id="e1" action="email.jsp" method="post">
+		<filedset>
+			<label>이름</label>
+			<input type="text"><br>
+			<label>이메일</label>
+			<input type="text"><br>
+			<label>내용</label><br>
+			<textarea name="so" rows="10" cols="60"></textarea><br>
+			<button>전송</button>
+			<button type="reset">재설정</button>
+		</filedset>
+	</form>
+	
+	<hr>
+	<h1>회원 가입 화면</h1>
+	<form id="e2">
+		<filedset>
+			<lable>이름</lable>
+			<input type="text"><br>
+			<lable>주소</lable>
+			<input type="text"><br>
+			<lable>이메일</lable>
+			<input type="text"><br>
+			<input type="radio" value="남자">Male <br>
+			<input type="radio" value="여자">Female<br>
+			<button>Send</button>
+			<button type="reset">원래대로</button>
+		</filedset>
+	</form>
+</body>
+</html>

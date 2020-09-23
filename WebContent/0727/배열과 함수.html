@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1() {
+	f = ["사과", 100, "참외", 200, "복숭아", "포도"]	;
+	print('#result1');
+}
+
+function proc2() {
+	f = new Array("사과", "바나나", "참외", "수박", "복숭아", "포도");
+	// 변수명 앞에 var , let 등을 안붙이면 전역변수 
+	print('#result2');
+}
+
+function proc3() {
+	f = new Array();
+	f[0]="파인애플";
+	f[1]=123.456;
+	f[2]=100;
+	print('#result3');
+}
+
+function print(out) {
+	res ="";
+// 	for(i=0; i<f.length; i++){
+// 		res+=f[i] + " ";
+// 	}
+	for(x in f){ // 
+		res += f[x]+ "<br>";
+	}
+	document.querySelector(out).innerHTML=res;	
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>1. 배열-리터럴 생성</h3>
+	f= ["사과", "바나나", "참외", "수박", "포도", "복숭아"]<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2. 배열-생성자 생성</h3>
+	f= new Array("사과", "바나나", "참외", "수박", "포도", "복숭아")<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>3. 배열-생성자default</h3>
+	f= new Array()<br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br><br>
+	<div id="result3"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table {
+	width: 50%;
+	margin: 20px auto;
+}
+
+td {
+	width: 80px;
+	height: 70px;
+	text-align: center;
+}
+
+#tab2 {
+	border: 3px solid blue;
+	border-collapse: separate;
+}
+
+#tab2 td{
+	width:150px;
+}
+
+#tab2 #info {
+	width: 600px;
+}
+
+#tab2 #td2{
+	height: 100px;
+}
+
+
+/* 클래스는 .만 씀*/
+#tab2 .info{
+	text-align: left;
+}
+</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td colspan=2></td>
+			<td colspan=2></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td colspan=4></td>
+			<td colspan=2></td>
+		</tr>
+
+		<tr>
+			<td colspan=4></td>
+			<td colspan=2, rowspan=2></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	<table id="tab2" border="2">
+			<td colspan=5>대덕인재개발원</td>
+		</tr>
+		
+		<tr>
+			<td>강좌이름</td>
+			<td>강의자</td>
+			<td>소개</td>
+			<td>강좌코드</td>
+			<td>실습비</td>
+		</tr>
+		
+		<tr>
+			<td id="td2">성악아카데미</td>
+			<td>김애용</td>
+			<td id="info" class="info">애용</td>
+			<td>001</td>
+			<td>15000원</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="info">김애용</td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="info">때껄룩</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

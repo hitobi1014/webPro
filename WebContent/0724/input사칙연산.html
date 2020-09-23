@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<style>
+div{
+	width: 200px;
+	height: 100px;
+	background: lightblue;
+	font: bold 2.0em koverWatch;
+	color: black;
+	text-align: center;
+	padding: 20px;
+}
+</style>
+<script>
+	function calc() {
+		x = prompt("첫 번째 수를 입력하세요");
+		a = prompt("연산자를 입력해주세요 (*, / , -, +)");
+		y = prompt("두 번재 수를 입력하세요");
+		res = 0;
+		
+		switch(a){
+		case '+':
+			res = parseInt(x)+parseInt(y);	
+			break;
+		case '-':
+			res = parseInt(x)-parseInt(y);
+			break;
+		case '*':
+			res = parseInt(x)*parseInt(y);
+			break;
+		case '/':
+			res = parseInt(x)/parseInt(y);
+			break;
+		}
+		document.getElementById('out').innerHTML=x+a+y+"<br>"+" = "+res;
+		
+	}
+</script>
+<body>
+<pre>
+두 개의 수를 prompt로 입력받는다.
+한 개의 연산자를 prompt로 입력받는다.
+연산자를 비교해서 (if/switch) 연산을 수행한다.
+결과값을 div에 출력한다.
+<input type="button" onclick="calc()" value="확인">
+<br>
+<div id="out"></div>
+</pre>
+</body>
+</html>
